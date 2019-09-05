@@ -1,0 +1,75 @@
+Adobe下：Alt+左箭头 Alt+右箭头 
+
+MATLAB
+Tab”键能够在输入MATLAB命令时补全函数名，
+help 命令名  或  doc 命令名，建议使用doc命令 
+多行注释：ctrl+r/t
+跳转到变量定义出：ctrl + d
+返回到变量定义出：?
+
+Latex 回到bug的地方：
+输入e
+1. select a region
+2. comment: Ctrl+Alt+Shift + <rightarrow> 
+3. uncomment: Ctrl+Alt+Shift + <leftarrow>
+
+Sublime：
+批量注释：Ctrl + /
+取消注释：Ctrl + shrift + /
+
+高亮:安装wordhighlight包
+双击高亮，按下alt+enter以后，直接全选中，然后就可以同时编辑了，
+
+vim：
+复制多行：
+将第9行至第15行的数据，复制到第16行
+
+yy：复制光标所处当前行
+n + yy：复制光标所在行及以下共 n 行
+按 p 粘贴在光标所在行
+
+gg 跳至文首
+u 撤销
+
+恢复撤销：Ctrl + r
+
+dd：剪切光标所处当前行
+n + dd：剪切光标所在行及以下共 n 行
+按 p 粘贴在光标所在行
+
+:10,20s/from/to/g
+:%s/from/to/g
+
+ctrl + n 代码只能提示
+
+ cat Example.txt | tee e2.tx 既输出到屏幕又保存文件
+ 
+ ./runGM | tee  result_GM_large.txt &
+ 
+ make > debug.log 2>&1
+
+连续的十几行到50行内的左右移动：
+      1. 第m行到第n行右移一个tab
+         ：m,n>
+      2. 第m行到第n行左移一个tab
+         ：m,n<
+
+/dev/null 
+
+压缩
+tar -cvf dynamic-order.tar.gz dynamic-order/
+解压命令：tar -zvxf memcached-1.4.34.tar.gz
+
+遇到了一个问题，
+
+　　gzip: stdin: not in gzip format
+
+　　tar: Child returned status 1
+
+　　tar: Error is not recoverable: exiting now
+
+ 现在我提供一下我总结的解决方法：
+
+方法一：
+
+#tar -vxf memcached-1.4.34.tar.gz
