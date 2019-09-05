@@ -1,0 +1,38 @@
+初始化设置
+
+git config --global user.name "RongfengHuang"
+
+git config --global user.email "rfhuang211@163.com"
+
+查看配置信息
+git config -l
+
+初始化
+git init
+
+远端关联
+git remote add origin https://github.com/rfhuang211/dgemm.git
+
+查看变化
+git status
+
+追踪文件
+git add * OR git add .
+git add read.txt
+
+提交
+git commit -m "第一次提交"
+
+推送到远端
+git push -u origin master
+
+
+git diff readme.txt
+
+查看提交日志
+git log
+git log --pretty=oneline
+
+版本回退
+git reset --hard 版本号
+note：使用该命名之后，git log 查不到该版本号以后的提交历史，可以使用 git reflog

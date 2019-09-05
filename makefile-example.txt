@@ -1,0 +1,16 @@
+cc = gcc
+prom = main_svd
+deps = $(shell find ./ -name "*.h")
+src = $(shell find ./ -name "*.cc")
+obj = $(src:%.cc=%.o)
+cflag = -lm
+
+$(prom): $(obj)
+    $(cc) -o $(prom) $(obj) $(cflag)
+    #@echo $(obj)
+
+%.o: %.cc $(deps)
+    $(cc) -c $< -o $@
+
+clean:
+    rm -rf $(obj) $(prom)
